@@ -2,12 +2,13 @@ SIGINT CTF 2013 pwning 100 - baremetal
 ---
 
 Exploit code: [sploit.py] [1]
+
 Shellcode: [sc.s] [2]
 
 The shellcode must be linked with the base address of the text segment at `0x80491c8`.
 This is accomplished by using the linker script: [sc.lds] [3]
 
-### The Specimen:
+### The Specimen
 
 ```
 $ file baremetal
@@ -22,8 +23,8 @@ Here is a summary of the binary's execution:
 * Writes the string "baremetal online\n" to stdout.
 * Reads up to 61 bytes from stdin into a buffer in the .bss section.
 * Performs the "sum test." The sum of the bytes is calculated up to the first null byte.
-** If the sum is 0x1ee7, the string "Sequence OK" is printed on stdout.
-** If the sum is not 0x1ee7, the string "Bad Sequence" is printed on stdout.
+* If the sum is 0x1ee7, the string "Sequence OK" is printed on stdout.
+* If the sum is not 0x1ee7, the string "Bad Sequence" is printed on stdout.
 * Exit.
 
 Both the buffer and the return address are _not_ stored on the stack.
@@ -45,15 +46,15 @@ This is the state right after the jump to `0x8049204`:
    0x8049206:	jmp    *%edi
    0x8049208:	add    %al,(%eax)
 (gdb) info registers
-eax            0x80491c8	134517192      ; the address of the input buffer
-ecx            0x8049204	134517252
-edx            0x0	0
-ebx            0x47	71
-esp            0xbffff820	0xbffff820
-ebp            0x0	0x0
-esi            0x0	0
-edi            0x80480f9	134512889
-eip            0x8049204	0x8049204
+eax            0x80491c8        134517192      ; the address of the input buffer
+ecx            0x8049204        134517252
+edx            0x0              0
+ebx            0x47             71
+esp            0xbffff820       0xbffff820
+ebp            0x0              0x0
+esi            0x0              0
+edi            0x80480f9        134512889
+eip            0x8049204        0x8049204
 eflags         0x200206	[ PF IF ID ]
 cs             0x73	115
 ss             0x7b	123
