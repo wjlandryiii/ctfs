@@ -1,0 +1,5 @@
+[[baremetal]]
+
+```$ file baremetal
+baremetal: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), statically linked, stripped
+```
