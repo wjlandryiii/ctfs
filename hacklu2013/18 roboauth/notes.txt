@@ -1,0 +1,11 @@
+Password1: r0b0RUlez!
+Password2: w3lld0ne
+
+key: r0b0RUlez!_w3lld0ne
+
+AddVectoredExceptionHandler(1, 0x40157f)
+u1nnf2lg
+0028FDCC  75 31 6E 6E 66 32 6C 67  u1nnf2lg
+0028FDD4  02 50 6C 65 61 73 65 20  .Please
+
+

